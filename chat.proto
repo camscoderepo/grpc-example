@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package chat;
+
+option go_package = "github.com/golang/protobuf/protoc-gen-go;protoc_gen_go";
+
+message Message {
+    string body = 1;
+}
+
+service ChatService {
+    rpc SayHello(Message) returns (Message) {}
+}
+
